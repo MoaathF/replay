@@ -1,17 +1,17 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture("rtsp://admin:wwww@1234@192.168.1.168:554/Streaming/Channels/101")
+cap = cv2.VideoCapture("rtsp://username:password@camera_ip:RSTP_code_No/Streaming/Channels/101")
 
 # cap.open()
 while(True):
      # Capture frame-by-frame
     ret, frame = cap.read()
 
-    # Our operations on the frame come here
+    # for operations on the frame or recoloring the following line is used
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # resize frame
+    # to resize frame the following line is used
     resized_frame = cv2.resize(frame, (640,480))
     
     # Display the resulting frame
